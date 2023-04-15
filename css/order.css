@@ -1,0 +1,683 @@
+@import url('root.css');
+
+/*Body heseg*/
+body {
+	background-color: #f4e9e0;
+	opacity: 1;
+	background-image: radial-gradient(#f6a24a 2px, transparent 2px), radial-gradient(#f6a24a 2px, #f4e9e0 2px);
+	background-size: 80px 80px;
+	background-position: 0 0, 40px 40px;
+	background-attachment: fixed;
+	text-align: left;
+	overflow-x: hidden;
+}
+
+.container {
+	display: grid;
+	grid-template-rows: auto auto;
+	grid-template-columns: auto auto auto;
+	font-size: 110%;
+	margin: 0 1% 5% 4%;
+}
+
+/*Deed taliin processiig aguulagch heseg*/
+.process {
+	display: block;
+	margin: 5% auto 5% auto;
+	flex-direction: column;
+	align-items: center;
+	max-width: 27%;
+	max-height: 15%;
+	width: 100%;
+	grid-column: 1 / 4;
+	grid-row: 1;
+}
+
+/*3 steps iig aguulj bui heseg*/
+.process .steps {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+
+/*Hurgeltiin zurag*/
+.steps>#Ehnii_version {
+	position: absolute;
+	width: 20%;
+	bottom: 0.3rem;
+	left: 10%;
+}
+
+/*Hurgeltiin zurag 2r version*/
+.steps>#Hoyrdugaar_version {
+	display: none;
+	position: absolute;
+	width: 20%;
+	bottom: 0.3rem;
+	left: 25%;
+}
+
+.steps>#Guravdugaar_version {
+	display: none;
+	position: absolute;
+	width: 20%;
+	bottom: 0.3rem;
+	left: 70%;
+}
+
+/*Jiriin uye iin processiin circle*/
+.steps .circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2.5% 4%;
+	border-radius: 50%;
+	background: var(--process_background);
+	color: #EE3A43;
+	transition: all 200ms ease;
+	transition-delay: 0s;
+}
+
+/*Activated circle*/
+.steps .circle.active {
+	transition-delay: 100ms;
+	background: var(--process_background);
+	color: #FFFFFF;
+}
+
+/*Processiig holbogch*/
+.steps .progress-bar {
+	position: absolute;
+	height: 0.25rem;
+	width: 100%;
+	background: #000000;
+	z-index: -1;
+}
+
+/*3 columniin heseg*/
+.Sagsnii_heseg,
+.Hurgeltiin_heseg,
+.Tulburiin_heseg {
+	background: var(--column_background);
+	padding: 2.75rem 10%;
+	height: 90%;
+	max-width: 18.75rem;
+	width: 70%;
+	grid-row: 2;
+	border-radius: 0.938rem;
+}
+
+/*buh garchiguud*/
+h2 {
+	text-align: center;
+}
+
+/*Garchig doorh medeelel*/
+.Tulburiin_heseg>section>p,
+.Hurgeltiin_medeelel>p,
+.Sagsnii_medeelel>p {
+	text-align: left;
+	margin-bottom: 10%;
+}
+
+/*Garchig doorh zuraas*/
+.Tulburiin_doorh_line,
+.Hurgeltiin_doorh_line,
+.Sagsnii_doorh_line {
+	height: 1px;
+	background: black;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.Tulburiin_doorh_line {
+	width: 80%;
+}
+
+.Hurgeltiin_doorh_line {
+	width: 70%;
+}
+
+.Sagsnii_doorh_line {
+	width: 30%;
+}
+
+/*Hurgeltiin hesgiin section*/
+.Hurgeltiin_ner_hayg>form {
+	display: grid;
+	grid-template-rows: auto auto auto auto auto auto auto auto;
+	grid-template-columns: auto;
+	row-gap: 3%;
+}
+
+/*Hurgeltiin tovch*/
+.Hurgeltiin_tovch {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-items: center;
+	align-content: center;
+}
+
+/*Burtgeliin 2 bagana*/
+.Burtgel {
+	grid-template-columns: auto auto;
+}
+
+/*Burtgeliin labeluud*/
+.Burtgel>label {
+	grid-column: 1;
+	margin-right: 15%;
+}
+
+/*Huviin medeelel.Ner hayg geh met*/
+.Hurgeltiin_ner_hayg>form>section>label {
+	width: 3.438rem;
+	height: 1.25rem;
+	display: inline-block;
+}
+
+/*Ner utas zergiin input*/
+.Hurgeltiin_ner_hayg>form>section>input {
+	grid-column: 2;
+	background-color: #FFFFFF;
+	padding: 2%;
+	border: 1px solid #000000;
+	border-radius: 0.938rem;
+	width: 50%;
+}
+
+/*Duureg, horoogiin input*/
+.Hurgeltiin_ner_hayg>form>section>#Duureg_id,
+.Hurgeltiin_ner_hayg>form>section>#Horoo_id {
+	background-color: #FFFFFF;
+	padding: 2%;
+	border: 1px solid #000000;
+	border-radius: 0.938rem;
+	width: 55%;
+}
+
+.Tulbur {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto;
+	row-gap: 5%;
+	padding-top: 10%;
+}
+
+.Tulbur>.Zurag {
+	grid-row: 1;
+	display: grid;
+	grid-template-rows: auto auto auto;
+	row-gap: 5%;
+	justify-items: center;
+	align-content: center;
+}
+
+/*Qpay heseg*/
+.Tulbur>.Zurag>picture>a>#Qpay {
+	width: 7.688rem;
+	height: 7.688rem;
+}
+
+/*Applepay heseg*/
+.Tulbur>.Zurag>picture>a>#ApplePay {
+	width: 12.5rem;
+	height: 8.125rem;
+}
+
+/*Creditcard heseg*/
+.Tulbur>.Zurag>picture>a>#CreditCard {
+	width: 9rem;
+	height: 6.313rem;
+}
+
+/*Niit uniin  dun*/
+.Tulburiin_heseg>.Tulbur>.Niit_une {
+	grid-row: 2;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+	text-align: left;
+	padding-top: 5%;
+	row-gap: 12%;
+}
+
+/*Niit uniin  dun hesgiin niit*/
+.Tulburiin_heseg>.Tulbur>.Niit_une>p:nth-child(1) {
+	grid-column: 1;
+}
+
+/*Niit uniin  dun hegiin une*/
+.Tulburiin_heseg>.Tulbur>.Niit_une>p:nth-child(2) {
+	grid-column: 2;
+	text-align: right;
+}
+
+/*Tulbut tuluh hesgiin tovch*/
+.Niit_une>button {
+	grid-row: 2;
+	grid-column: 1 /3;
+	padding: 4% 10%;
+}
+
+/*buh tovchnii zagvar*/
+.Niit_une>button,
+.Hurgeltiin_ner_hayg>form>section>button {
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	border-radius: 0.938rem;
+	cursor: pointer;
+}
+
+/*Niit uniin tovch*/
+.Niit_une>button,
+.Sagsnii_dotorh>.Sags_zahialga>.Sagsnii_tovch>button {
+	display: block;
+	margin: 0 auto 0 auto;
+}
+
+/*Hurgeltiin butsah tovch*/
+.Hurgeltiin_ner_hayg>form>.Hurgeltiin_tovch>#Butsah_button {
+	margin-top: 1.25rem;
+	padding: 8% 15%;
+}
+
+/*Hurgeltiin urgeljluuleh tovch*/
+.Hurgeltiin_ner_hayg>form>.Hurgeltiin_tovch>#Urgeljluuleh_button {
+	margin-top: 1.25rem;
+	padding: 4% 15%;
+	/* margin: 1.875rem auto 0 0; */
+}
+
+/*Zahialgiin heseg*/
+.Sagsnii_dotorh>.Sags_zahialga {
+	display: grid;
+	grid-template-columns: auto;
+	gap: 3rem;
+}
+
+/*Buteegdehuun1*/
+.Sagsnii_dotorh>.Sags_zahialga>.Buteegdehuun {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto auto;
+	background-color: #FFFFFF;
+	border-radius: 0.938rem;
+	border: 1px solid #000000;
+	padding: 1.063rem 0.5rem 0 2.063rem;
+}
+
+/*Buteegdehuun1 iin garchig*/
+.Sagsnii_dotorh>.Sags_zahialga>.Buteegdehuun>.Garchig {
+	grid-row: 1;
+	grid-column: 1 /3;
+}
+
+/*Buteegdehuun1 songolt*/
+.Sagsnii_dotorh>.Sags_zahialga>.Buteegdehuun>.Songolt {
+	grid-row: 2;
+	grid-column: 1;
+	background-color: #FFFFFF;
+	width: 100%;
+	padding: 2%;
+	border: 1px solid #000000;
+	border-radius: 0.9rem;
+}
+
+/*Buteegdehuun1 ustgah tovch*/
+.Sagsnii_dotorh>.Sags_zahialga>.Buteegdehuun>.Ustgah {
+	grid-column: 3;
+	grid-row: 2;
+	width: 1.75rem;
+	height: 1.75rem;
+	/* padding: 30% 40%; */
+	border-radius: 50%;
+	background-color: #FFFFFF;
+	color: #CEB79B;
+	border: 1px solid #CEB79B;
+	cursor: pointer;
+	display: block;
+	margin: auto auto;
+}
+
+/*Buteegdehuun1 hool nemeh heseg*/
+.Sagsnii_dotorh>.Sags_zahialga>.Buteegdehuun>.Hool_nemeh {
+	grid-row: 3;
+	grid-column: 1;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	width: 20%;
+	/* height: 2.188rem; */
+}
+
+/*Buteegdehuun1 hool nemeh hasah tovch*/
+.Sagsnii_dotorh>.Sags_zahialga>.Buteegdehuun>.Hool_nemeh>.Nemeh,
+.Sagsnii_dotorh>.Sags_zahialga>.Buteegdehuun>.Hool_nemeh>.Hasah {
+	width: 1.75rem;
+	height: 1.75rem;
+	margin-top: 0.867rem;
+	border-radius: 0.5rem;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	cursor: pointer;
+}
+
+.Sagsnii_dotorh>.Sags_zahialga>.Buteegdehuun>.Hool_nemeh>.Nemeh {
+	grid-column: 1;
+}
+
+.Sagsnii_dotorh>.Sags_zahialga>.Buteegdehuun>.Hool_nemeh>p {
+	width: 1.75rem;
+	height: 1.75rem;
+	grid-column: 2;
+	text-align: center;
+}
+
+.Sagsnii_dotorh>.Sags_zahialga>.Buteegdehuun>.Hool_nemeh>.Hasah {
+	grid-column: 3;
+}
+
+/*Buteegdehuun1 hoolnii uniin heseg*/
+.Sagsnii_dotorh>.Sags_zahialga>.Buteegdehuun>.Une {
+	grid-row: 3;
+	grid-column: 2;
+	text-align: left;
+}
+
+/*Sagsnii niit une+tovch*/
+.Sagsnii_dotorh>.Sags_zahialga>.Sagsnii_tovch {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+	row-gap: 21%;
+}
+
+/*Sagsnii niit une*/
+.Sagsnii_dotorh>.Sags_zahialga>.Sagsnii_tovch>p:nth-child(1) {
+	grid-column: 1;
+}
+
+/*Sagsnii une*/
+.Sagsnii_dotorh>.Sags_zahialga>.Sagsnii_tovch>p:nth-child(2) {
+	grid-column: 2;
+	text-align: right;
+}
+
+/*Sagsnii tovch*/
+.Sagsnii_dotorh>.Sags_zahialga>.Sagsnii_tovch>button {
+	background-color: var(--process_background);
+	padding: 4% 7%;
+	border: 1px solid #EE3A43;
+	border-radius: 0.938rem;
+	cursor: pointer;
+	color: #FFFFFF;
+	grid-row: 2;
+	grid-column: 1 /3;
+}
+
+/* Media query */
+@media only screen and (max-width: 1023px) and (min-width:768px) {
+	.container {
+		display: grid;
+		grid-template-rows: auto auto;
+		grid-template-columns: auto auto;
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+		row-gap: 1%;
+		column-gap: 15%;
+		margin-right: 8%;
+		margin-left: 0;
+	}
+
+	/*Deed taliin processiig aguulagch heseg*/
+	.process {
+		display: block;
+		margin: 8% auto 10% auto;
+		flex-direction: column;
+		align-items: center;
+		max-width: 40%;
+		max-height: 15%;
+		width: 100%;
+		grid-column: 1 / 3;
+		grid-row: 1;
+		font-size: 90%;
+	}
+
+
+	/*Hurgeltiin zurag*/
+	.steps>#Ehnii_version {
+		
+		width: 22%;
+	}
+
+	/*Hurgeltiin zurag 2r version*/
+	.steps>#Hoyrdugaar_version {
+		display: none;
+		width: 22%;
+	}
+
+	.steps>#Guravdugaar_version {
+		display: none;
+		width: 22%;
+	}
+
+	/*Sagsni heseg*/
+	.Sagsnii_heseg {
+		display: none;
+		background: var(--column_background);
+		padding: 2.75rem 10% 0 10%;
+		margin: 0 1px;
+		max-width: 16.875rem;
+		width: 100%;
+		height: 100%;
+		grid-row: 2;
+		grid-column: 2;
+	}
+
+	/*Hurgelt bolon Tulburiin heseg*/
+	.Hurgeltiin_heseg {
+		grid-row: 2;
+		grid-column: 1;
+	}
+
+	.Tulburiin_heseg {
+
+		grid-row: 2;
+		grid-column: 2;
+	}
+
+	/*Hurgelt bolon Tulburiin heseg*/
+	.Hurgeltiin_heseg,
+	.Tulburiin_heseg {
+		background: var(--column_background);
+		padding: 2.75rem 10% 0 10%;
+		margin: 0 1px;
+		max-width: 16.875rem;
+		width: 100%;
+		height: 100%;
+	}
+
+	/*3 zurgiig aguulagch section*/
+	.Tulbur>.Zurag {
+		row-gap: 5%;
+		margin-top: 5%;
+	}
+
+	/*Qpay heseg*/
+	.Tulbur>.Zurag>picture>a>#Qpay {
+		width: 6.688rem;
+		height: 6.688rem;
+	}
+
+	/*Applepay heseg*/
+	.Tulbur>.Zurag>picture>a>#ApplePay {
+		width: 11.5rem;
+		height: 6.813rem;
+	}
+
+	/*Creditcard heseg*/
+	.Tulbur>.Zurag>picture>a>#CreditCard {
+		width: 8rem;
+		height: 5.688rem;
+	}
+
+	/*Nitt uniin tovch*/
+	.Niit_une>button {
+		margin-bottom: 8%;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+
+	/*Aguulagch heseg*/
+	.container {
+		display: grid;
+		grid-template-rows: auto auto;
+		grid-template-columns: auto;
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+		row-gap: 5%;
+		margin: 4.25rem 10px 4rem 10px;
+	}
+
+	/*Processiin heseg*/
+	.process {
+		display: none;
+	}
+
+	/*Sagsnii heseg*/
+	.Sagsnii_heseg {
+		display: none;
+		grid-row: 1 / 3;
+		padding: 1.75rem 15%;
+		height: 95%;
+		max-width: 25rem;
+	}
+
+	/*Hurgeltiin heseg*/
+	.Hurgeltiin_heseg {
+		grid-row: 1;
+	}
+
+	/*Tulburiin heseg*/
+	.Tulburiin_heseg {
+		grid-row: 2;
+		margin-bottom: 1.25rem;
+	}
+
+	/*Hurgelt bolon tulburiin heseg*/
+	.Hurgeltiin_heseg,
+	.Tulburiin_heseg {
+		/* display: none; */
+		padding: 1.75rem 15%;
+		/* margin: 1.75rem; */
+		height: 95%;
+		max-width: 25rem;
+	}
+
+	/*Buteegdehuun1 ustgah tovch*/
+	.Sagsnii_dotorh>.Sags_zahialga>.Buteegdehuun>.Ustgah {
+		width: 1.35rem;
+		height: 1.35rem;
+		text-align: center;
+	}
+
+	/*Buteegdehuun1 hool nemeh hasah tovch*/
+	.Sagsnii_dotorh>.Sags_zahialga>.Buteegdehuun>.Hool_nemeh>.Nemeh,
+	.Sagsnii_dotorh>.Sags_zahialga>.Buteegdehuun>.Hool_nemeh>.Hasah {
+		width: 1.35rem;
+		height: 1.35rem;
+		margin-top: 0.95rem;
+		border-radius: 0.5rem;
+		background-color: #FFFFFF;
+		border: 1px solid #000000;
+		cursor: pointer;
+	}
+
+	.Sagsnii_dotorh>.Sags_zahialga>.Buteegdehuun>.Hool_nemeh>p {
+		width: 1.35rem;
+		height: 1.35rem;
+		grid-column: 2;
+		text-align: center;
+		font-size: 95%;
+	}
+
+	/*Buteegdehuun1 hoolnii uniin heseg*/
+	.Sagsnii_dotorh>.Sags_zahialga>.Buteegdehuun>.Une {
+		font-size: 95%;
+	}
+
+	/*Hurgeltiin ner hayg avah heseg*/
+	.Hurgeltiin_ner_hayg>form {
+		row-gap: 1%;
+	}
+
+	/*Burtgeliin label section*/
+	.Burtgel>label {
+		margin-right: 20%;
+	}
+
+	/*Huviin medeelel.Ner hayg geh met*/
+	.Hurgeltiin_ner_hayg>form>section>label {
+		width: 1.138rem;
+		height: 0.25rem;
+	}
+
+	/*Ner utas zergiin input*/
+	/*Duureg, horoogiin input*/
+	.Hurgeltiin_ner_hayg>form>section>input,
+	.Hurgeltiin_ner_hayg>form>section>#Duureg_id,
+	.Hurgeltiin_ner_hayg>form>section>#Horoo_id {
+		margin-left: 1.25rem;
+	}
+
+	/*Hurgeltiin butsah tovch*/
+	.Hurgeltiin_ner_hayg>form>.Hurgeltiin_tovch>#Butsah_button {
+		padding: 5% 10%;
+	}
+
+	/*Hurgeltiin urgeljluuleh tovch*/
+	.Hurgeltiin_ner_hayg>form>.Hurgeltiin_tovch>#Urgeljluuleh_button {
+		padding: 5% 10%;
+	}
+
+	/*Nitt uniin tovch*/
+	.Niit_une>button {
+		padding: 3% 8%;
+	}
+
+	/*Tulburiin hesgiin section*/
+	.Tulbur {
+		row-gap: 4%;
+	}
+
+	/*3 zurag aguulsn section*/
+	.Tulbur>.Zurag {
+		row-gap: 10%;
+		margin-top: 5%;
+	}
+
+	/*Qpay heseg*/
+	.Tulbur>.Zurag>picture>a>#Qpay {
+		width: 5.688rem;
+		height: 5.688rem;
+	}
+
+	/*Applepay heseg*/
+	.Tulbur>.Zurag>picture>a>#ApplePay {
+		width: 10.5rem;
+		height: 6.25rem;
+	}
+
+	/*Creditcard heseg*/
+	.Tulbur>.Zurag>picture>a>#CreditCard {
+		width: 7rem;
+		height: 4.938rem;
+	}
+}
