@@ -100,11 +100,12 @@ body {
 	width: 70%;
 	max-width: 18.75rem;
 	height: 90%;
-	background: var(--column_background);
+	background-color:gray;
 	padding: 2.75rem 10%;
 	border-radius: var(--border_radius);
 	grid-row: 2;
 }
+
 
 /*buh garchiguud*/
 h2 {
@@ -276,6 +277,7 @@ h2 {
 	margin: 0 auto 0 auto;
 	display: block;
 }
+
 
 /*Hurgeltiin butsah tovch*/
 .Hurgeltiin_ner_hayg>form>.Hurgeltiin_tovch>#Butsah_button {
