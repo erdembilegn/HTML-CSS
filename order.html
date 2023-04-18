@@ -17,8 +17,9 @@
     мэдээ мэдээлэл бүхий веб сайт.">
     <meta property="og:url" content="https://ochirsukh0819.github.io/EOT/">
     <title>Pizza Hut</title>
-    <link rel="stylesheet" href="css/header_footer.css">
+    <link rel="stylesheet" href="css/order_header_footer.css">
     <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="css/root.css">
 
     <!-- <script src="./orders.js" defer></script> -->
 </head>
@@ -151,18 +152,18 @@
                     <form action="/action_page.php">
                         <section class="Burtgel">
                             <label for="Ner">Нэр:</label>
-                            <input type="text" name="fname"><br><br>
+                            <input id="Ner" type="text" name="fname"><br><br>
                         </section>
 
                         <section class="Burtgel">
                             <label for="Utas">Утас:</label>
-                            <input type="text" name="phone"><br><br>
+                            <input id="Utas" type="text" name="phone"><br><br>
                         </section>
 
                         <section class="Burtgel">
-                            <label for="Duureg">Дүүрэг:</label>
+                            <label for="Duureg_id">Дүүрэг:</label>
                             <!-- HTML Dropdown list -->
-                            <select name="Duureg" id="Duureg_id">
+                            <select id="Duureg_id" name="Duureg" >
                                 <option value="SBD">Сүхбаатар дүүрэг</option>
                                 <option value="BGD">Баянгол дүүрэг</option>
                                 <option value="BZD">Баянзүрх дүүрэг</option>
@@ -173,7 +174,7 @@
                         </section>
 
                         <section class="Burtgel">
-                            <label for="Horoo">Хороо:</label>
+                            <label for="Horoo_id">Хороо:</label>
                             <select name="Horoo" id="Horoo_id">
                                 <option value="H_1">1-р хороо</option>
                                 <option value="H_2">2-р хороо</option>
@@ -190,22 +191,22 @@
 
                         <section class="Burtgel">
                             <label for="Bair">Байр:</label>
-                            <input type="text" name="Bair"><br><br>
+                            <input id="Bair" type="text" name="Bair"><br><br>
                         </section>
 
                         <section class="Burtgel">
                             <label for="Orts">Орц:</label>
-                            <input type="text" name="Orts"><br><br>
+                            <input id="Orts" type="text" name="Orts"><br><br>
                         </section>
 
                         <section class="Burtgel">
                             <label for="Toot">Тоот:</label>
-                            <input type="text" name="Toot"><br><br>
+                            <input id="Toot" type="text" name="Toot"><br><br>
                         </section>
 
                         <section class="Hurgeltiin_tovch">
-                            <button type="text" id="Butsah_button">Буцах</button>
-                            <button type="text" id="Urgeljluuleh_button">Үргэлжлүүлэх</button>
+                            <button type="submit" id="Butsah_button">Буцах</button>
+                            <button type="submit" id="Urgeljluuleh_button">Үргэлжлүүлэх</button>
                         </section>
 
                     </form>
@@ -223,26 +224,18 @@
                 </section>
             <section class="Tulbur">
                 <section class="Zurag">
-                    <picture>
-                        <a href="https://www.qpay.mn/"> <img id="Qpay" src="./order_image/qpay.PNG" alt="Qpay"></a>
-                    </picture>
-
-                    <picture>
-                        <a href="https://www.apple.com/apple-pay/"> <img id="ApplePay" src="./order_image/apple.png"
+                    <a href="https://www.qpay.mn/"> <img id="Qpay" src="./order_image/qpay.PNG" alt="Qpay"></a>
+                    <a href="https://www.apple.com/apple-pay/"> <img id="ApplePay" src="./order_image/apple.PNG"
                                 alt="ApplePay"></a>
-                    </picture>
-
-                    <picture>
-                        <a href="https://sbeta.khanbank.com/auth/login"> <img id="CreditCard"
+                    <a href="https://sbeta.khanbank.com/auth/login"> <img id="CreditCard"
                                 src="./order_image/cre.PNG" alt="CreditCard"></a>
-                    </picture>
                 </section>
 
                 <section class="Niit_une">
                     <p>Нийт</p>
                     <p>99'999₮</p>
 
-                    <button type="text">Буцах</button>
+                    <button type="submit">Буцах</button>
                 </section>
 
             </section>
@@ -257,11 +250,10 @@
         <section class="footer_top_section">
 
         <section class="footer_logo">
-            <picture>
+
                 <!-- <source srcset="path/to/image-large.jpg" media="(min-width: 800px)">
                 <source srcset="path/to/image-medium.jpg" media="(max-width: 500px)"> -->
-                <a href="#"><img src="./homePage_image/footerLogo.png" alt="Pizza Hut Logo" width="70%"></a>
-            </picture>
+                <a href="#"><picture><img src="./homePage_image/footerLogo.png" alt="Pizza Hut Logo"></picture></a>
         </section>
 
         <article class="about_us">
@@ -280,7 +272,7 @@
         </article>
 
             <article class="about_us">
-                <h3>ТУСЛАМЖ ҮЙЛЧИЛГЭЭ</h3>
+                <p>ТУСЛАМЖ ҮЙЛЧИЛГЭЭ</p>
                 <ul>
                     <li>
                         <a href="#">Илчлэгийн мэдээлэл</a>
@@ -327,12 +319,12 @@
                     <section class="input1">
                         <div>
                             <label for="email">Эмайл</label>
-                            <input type="email" name="mail" placeholder="Ochirsukh@email.com">
+                            <input id="email" type="email" name="mail" placeholder="Ochirsukh@email.com">
                             <br>
                         </div>
                         <div>
                             <label for="phone">Утас</label>
-                            <input type="text" name="mail" placeholder="+976 ########">
+                            <input id="phone" type="text" name="mail" placeholder="+976 ########">
                             <br>
                         </div>
                     </section>

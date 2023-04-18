@@ -214,19 +214,19 @@ h2 {
 }
 
 /*Qpay heseg*/
-.Tulbur>.Zurag>picture>a>#Qpay {
+.Tulbur>.Zurag>a>#Qpay {
 	width: 7.688rem;
 	height: 7.688rem;
 }
 
 /*Applepay heseg*/
-.Tulbur>.Zurag>picture>a>#ApplePay {
+.Tulbur>.Zurag>a>#ApplePay {
 	width: 12.5rem;
 	height: 8.125rem;
 }
 
 /*Creditcard heseg*/
-.Tulbur>.Zurag>picture>a>#CreditCard {
+.Tulbur>.Zurag>a>#CreditCard {
 	width: 9rem;
 	height: 6.313rem;
 }
