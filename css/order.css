@@ -50,22 +50,7 @@ body {
 	position: absolute;
 }
 
-/*Hurgeltiin zurag 2r version*/
-.steps>#Hoyrdugaar_version {
-	width: 20%;
-	bottom: 0.3rem;
-	left: 25%;
-	position: absolute;
-	display: none;
-}
 
-.steps>#Guravdugaar_version {
-	width: 20%;
-	bottom: 0.3rem;
-	left: 70%;
-	position: absolute;
-	display: none;
-}
 
 /*Jiriin uye iin processiin circle*/
 .steps .circle {
@@ -94,18 +79,22 @@ body {
 }
 
 /*3 columniin heseg*/
-.Sagsnii_heseg,
-.Hurgeltiin_heseg,
+#Sagsnii_heseg,
+#Hurgeltiin_heseg,
 .Tulburiin_heseg {
 	width: 70%;
 	max-width: 18.75rem;
 	height: 90%;
-	background-color:gray;
+	background-color:#FFFFFF;
+	/* background-color:#DBDADA; */
 	padding: 2.75rem 10%;
 	border-radius: var(--border_radius);
 	grid-row: 2;
+	opacity: 0.7;
 }
-
+#Sagsnii_heseg{
+	opacity: 1;
+}
 
 /*buh garchiguud*/
 h2 {
@@ -453,18 +442,6 @@ h2 {
 	.steps>#Ehnii_version {
 		width: 22%;
 	}
-
-	/*Hurgeltiin zurag 2r version*/
-	.steps>#Hoyrdugaar_version {
-		width: 22%;
-		display: none;
-	}
-
-	.steps>#Guravdugaar_version {
-		width: 22%;
-		display: none;
-	}
-
 	/*Sagsni heseg*/
 	.Sagsnii_heseg {
 		width: 100%;
