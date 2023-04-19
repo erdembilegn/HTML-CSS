@@ -26,6 +26,9 @@ Sagsnii_tovch.addEventListener('click', ()=>{
         color: #000000;
     `
     Sagsnii_tovch.disabled = true;
+    Butsah_button.disabled = false;
+    Urgeljluuleh_button.disabled = false;
+    Tulburiin_butsah.disabled = true;
 })
 
 
@@ -54,9 +57,10 @@ Urgeljluuleh_button.addEventListener('click', ()=>{
     cursor: context-menu;
     color: #000000;
     `
-    
+    Sagsnii_tovch.disabled = true;
     Urgeljluuleh_button.disabled = true;
     Butsah_button.disabled = true;
+    Tulburiin_butsah.disabled = false;
 })
 
 
@@ -73,8 +77,7 @@ Tulburiin_butsah.addEventListener('click', ()=>{
 	border: 1px solid #EE3A43;
 	cursor: pointer;`
 
-    Urgeljluuleh_button.disabled = false;
-    Butsah_button.disabled = false;
+
 
     const Neg = document.getElementById('Ehnii_version')
     const HoyrLuu = 'left: 25%;'
@@ -86,6 +89,11 @@ Tulburiin_butsah.addEventListener('click', ()=>{
     border-radius: #000000;
     cursor: context-menu;
     color: #000000;`
+    
+    Sagsnii_tovch.disabled = true;
+    Butsah_button.disabled = false;
+    Urgeljluuleh_button.disabled = false;
+    Tulburiin_butsah.disabled = true;
 })
 
 
@@ -115,4 +123,7 @@ Butsah_button.addEventListener('click', ()=>{
 	cursor: pointer;`
 
     Sagsnii_tovch.disabled = false;
+    Butsah_button.disabled = true;
+    Urgeljluuleh_button.disabled = true;
+    Tulburiin_butsah.disabled = true;
 })
