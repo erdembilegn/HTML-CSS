@@ -50,8 +50,6 @@ body {
 	position: absolute;
 }
 
-
-
 /*Jiriin uye iin processiin circle*/
 .steps .circle {
 	background: var(--process_background);
@@ -212,7 +210,7 @@ h2 {
 
 /*Applepay heseg*/
 .Tulbur>.Zurag>a>#ApplePay {
-	width: 12.5rem;
+	width: 13.75rem;
 	height: 8.125rem;
 }
 

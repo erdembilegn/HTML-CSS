@@ -29,6 +29,11 @@ Sagsnii_tovch.addEventListener('click', ()=>{
     Butsah_button.disabled = false;
     Urgeljluuleh_button.disabled = false;
     Tulburiin_butsah.disabled = true;
+
+   const circle = document.getElementById('Hoyr_circle')
+   circle.style = 'color:#FFFFFF;'
+
+
 })
 
 
@@ -46,7 +51,7 @@ Urgeljluuleh_button.addEventListener('click', ()=>{
     color: #FFFFFF;
 	border: 1px solid #EE3A43;
 	cursor: pointer;`
-
+    
     const TulburiinHeseg = document.getElementById('Tulburiin_heseg')
 
     TulburiinHeseg.style = 'opacity: 1;'
@@ -61,6 +66,7 @@ Urgeljluuleh_button.addEventListener('click', ()=>{
     Urgeljluuleh_button.disabled = true;
     Butsah_button.disabled = true;
     Tulburiin_butsah.disabled = false;
+    
 })
 
 
@@ -94,6 +100,8 @@ Tulburiin_butsah.addEventListener('click', ()=>{
     Butsah_button.disabled = false;
     Urgeljluuleh_button.disabled = false;
     Tulburiin_butsah.disabled = true;
+
+
 })
 
 
@@ -126,4 +134,7 @@ Butsah_button.addEventListener('click', ()=>{
     Butsah_button.disabled = true;
     Urgeljluuleh_button.disabled = true;
     Tulburiin_butsah.disabled = true;
+
+    const circle = document.getElementById('Hoyr_circle')
+    circle.style = 'color:#EE3A43;'
 })
