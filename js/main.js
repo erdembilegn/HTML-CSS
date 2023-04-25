@@ -6,6 +6,7 @@ const TulburiinHeseg = document.getElementById('Tulburiin_heseg')
 const Tulburiin_butsah = document.getElementById('Tulburiin_butsah')
 const circle_two = document.getElementById('Hoyr_circle')
 const circle_three = document.getElementById('Hoyr_circle')
+
 Urgeljluuleh_button.disabled = true;
 Tulburiin_butsah.disabled = true;
 Butsah_button.disabled = true;
